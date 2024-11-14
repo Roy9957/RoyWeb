@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="showSection('home')">
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Personal Website!</h1>
+        <p>I'm Ronobir, a Software Engineer in the making!</p>
+    </header>
+
+    <!-- Sidebar Menu Section -->
+    <div class="sidebar">
+        <button class="menu-btn" onclick="toggleMenu()">⊕⊕⊕</button>
+        <div class="menu-content" id="menuContent">
+            <a href="#" class="menu-item" onclick="showSection('home')">Home</a>
+            <a href="#" class="menu-item" onclick="showSection('portfolio')">Portfolio</a>
+            <a href="#" class="menu-item" onclick="showSection('contact')">Contact</a>
+        </div>
+    </div>
+
+  <!-- About Me Section -->
+  <section id="home" class="active">
+    <h2>About Me</h2>
+    <div>
+      <img src="png.png" alt="Profile Picture">
+      <p>Hello! I'm Ronobir, a budding software engineer with a passion for coding and creating projects. I enjoy exploring new technologies and am always eager to learn and grow in the field.</p>
+    </div>
+    
+    
+    
+      <div>
+        <h2>My Education</h2>
+        <img src="m.png" alt="www special image">
+        <p>I am currently studying in class 7. I'm passionate about coding and technology, always striving to learn and grow.</p>
+      </div>
+      
+      <!-- Goals Section -->
+  
+        <h2>My Goals</h2>
+        <img src="h.png" alt="Humster.png">
+        <p>In the near future, I aim to become a software engineer and work on innovative projects that help improve people's lives.</p>
+     
+     
+     <!-- Achievements Section -->
+     
+       <h2>My Achievements</h2>
+       <img src="a.png" alt="X">
+       <ul>
+         <li>Created multiple fun gaming videos on YouTube</li>
+         <li>Started a gaming channel "R GAMERZ" on YouTube</li>
+         <li>Created my own website</li>
+         <li>Developed an IQ test machine project</li>
+       </ul>
+    
+     </section>
+  
+  
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <img src="7.png" alt="CR7"style="height:50px;">
+        <h2 id="">Portfolio</h2>
+        <div class="projects">
+            <div class="project">
+              <h3>Songtube</h3>
+        <p>A versatile music streaming and download platform that allows users to access a wide library of songs. Songtube emphasizes a smooth and user-friendly experience with high-quality audio options.</p>
+ 
+            </div>
+            <div class="project">
+       
+         
+            <h2>Gangchat</h2>
+            <p>Gangchat is a real-time chat application allowing users to communicate seamlessly. It features an easy-to-navigate interface, real-time message updates, and a responsive layout.</p>
+        
+            </div>
+      
+        
+        
+        
+      
+       <div class="project">
+          <h2>DO-MAIL</h2>
+          <p>DO-MAIL is a custom email-sending application with a fixed reply-to email address for secure communication. It integrates with EmailJS for quick setup and offers a user-friendly interface for sending emails easily.</p>
+       </div>
+       
+         <div class="project">
+        <h3>Watchtube</h3>
+        <p>A video streaming platform tailored for users looking to discover and share content easily. Watchtube focuses on simplicity, allowing creators to upload and viewers to enjoy content seamlessly.</p>
+       
+   </div>
+   
+   <div class="project">
+      <h3>Pixelora</h3>
+      <p>An image editing and sharing tool designed for creativity. Pixelora offers filters, effects, and tools for transforming photos into unique visual stories, making it ideal for artists and casual users alike.</p>
+      </div>
+      
+      
+      <!-- Soctic Search Engine Project -->
+      <div class="project">
+        <h2>Soctic (Custom Search Engine)</h2>
+        <p>Soctic is a custom search engine designed to deliver efficient and focused search results. It’s user-centric and offers a simple, clutter-free interface for quick access to relevant information.</p>
+      </div>
+      
+      
+      
+        
+         </div> 
+        
+        
+        
+        
+        
+        
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <img src="i.png" alt="YOUR map" style="height:50px;">
+      
+        <h2 id="b">Contact Me</h2>
+        <form id="contactForm">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        
+        
+        
+       <!-- Contact Information Section -->
+       
+         <h2>Contact Information</h2>
+         <p>You can reach out to me via email:<a href="mailto:songtube@protonmail.com"> <strong>songtube@protonmail.com </strong><img src="gj.png" alt="Full" style="height:12px; "></a></p>
+        
+      </section>
+    
+    <script src="//code.tidio.co/njkliylmy2uu5fywkcpgsttcyrivu6ig.js" async></script>
+    
+<!-- Footer Section -->
+<footer style="text-align: center; padding: 10px; background-color: darkred; color: #fff; position: fixed; bottom: 0; width: 100%;margin-top: 100px;">
+  <p>&copy; 2024 My Website | All Rights Reserved</p>
+</footer>
+<script src="script.js" type="module">
+</script>
+  
+  <script>
+  function toggleMenu() {
+    var menuContent = document.getElementById('menuContent');
+    if (menuContent.style.display === 'block') {
+      menuContent.style.display = 'none';
+    } else {
+      menuContent.style.display = 'block';
+    }
+  }
+
+  // Show the section and hide others
+  function showSection(sectionId) {
+    var sections = document.querySelectorAll('section');
+    sections.forEach(function(section) {
+      section.classList.remove('active');
+    });
+
+    var activeSection = document.getElementById(sectionId);
+    activeSection.classList.add('active');
+  }
+  </script>
+</body>
+</html>
